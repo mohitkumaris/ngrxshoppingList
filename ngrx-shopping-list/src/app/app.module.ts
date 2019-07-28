@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
-import {ShoppingReducer} from "./store/reducer/shopping.reducer";
+import {ShoppingReducer} from './store/reducer/shopping.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,11 +13,12 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
   imports: [
     BrowserModule,
     StoreModule.forRoot({
-      shopping:ShoppingReducer
+      shopping: ShoppingReducer
     }),
     StoreDevtoolsModule.instrument({
       maxAge: 10
-    })
+    }),
+    FormsModule
 
   ],
   providers: [],
