@@ -16,7 +16,7 @@ import { FormsModule} from '@angular/forms';
       shopping: ShoppingReducer
     }),
     StoreDevtoolsModule.instrument({
-      maxAge: 10
+      maxAge: 25
     }),
     FormsModule
 

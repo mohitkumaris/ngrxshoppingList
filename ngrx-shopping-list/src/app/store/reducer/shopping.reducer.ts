@@ -9,7 +9,10 @@ const intialState: Array<ShoppingItem> = [{
 export function ShoppingReducer(state: Array<ShoppingItem>= intialState, action: ShoppingAction) {
   switch (action.type) {
     case ShoppingActionTypes.ADD_ITEM:
-      this.state = [...state, action.payload];
+      return [...state, action.payload];
+    // tslint:disable-next-line: no-switch-case-fall-through
+    case ShoppingActionTypes.DELETE_ITEM:
+      return state.filter(item => item.id !== action.payload);
     default:
       return state;
 
