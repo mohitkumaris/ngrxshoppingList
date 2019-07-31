@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {ShoppingReducer} from './store/reducer/shopping.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { FormsModule} from '@angular/forms';
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule} from '@angular/forms';
     StoreDevtoolsModule.instrument({
       maxAge: 25
     }),
-    FormsModule
+    FormsModule,
+    HttpClientModule
 
   ],
   providers: [],
