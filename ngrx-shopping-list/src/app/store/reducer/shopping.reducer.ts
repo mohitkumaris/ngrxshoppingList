@@ -1,7 +1,6 @@
 import {ShoppingItem} from '../model/shopping-list.model';
 import {ShoppingAction, ShoppingActionTypes} from '../actions/shopping.action';
-import { loadavg } from 'os';
-import { error } from 'util';
+
 export interface ShoppingState {
   list: Array<ShoppingItem>;
   loading: boolean;
