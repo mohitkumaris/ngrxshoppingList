@@ -15,39 +15,40 @@ export enum ShoppingActionTypes {
 
 export class LoadShoppingAction implements Action {
   readonly type = ShoppingActionTypes.LOAD_SHOPPING;
-  constructor(public payload: ShoppingItem) {}
 }
-export class LoadShoppingActionSucess implements Action {
+export class LoadShoppingSucessAction implements Action {
   readonly type = ShoppingActionTypes.LOAD_SHOPPING_SUCCESS;
-  constructor(public payload: ShoppingItem) {}
+  constructor(public payload: Array<ShoppingItem>) {}
 }
-export class LoadShoppingActionFailure implements Action {
+export class LoadShoppingFailureAction implements Action {
   readonly type = ShoppingActionTypes.LOAD_SHOPPING_FAILURE;
-  constructor(public payload: ShoppingItem) {}
+  constructor(public payload: Error) {}
 }
 export class AddItemAction implements Action {
   readonly type = ShoppingActionTypes.ADD_ITEM;
   constructor(public payload: ShoppingItem) {}
 }
-export class AddItemActionSucess implements Action {
+export class AddItemSucessAction implements Action {
   readonly type = ShoppingActionTypes.ADD_ITEM_SUCCESS;
   constructor(public payload: ShoppingItem) {}
 }
-export class AddItemActionFailure implements Action {
+export class AddItemFailureAction implements Action {
   readonly type = ShoppingActionTypes.ADD_ITEM_FAILURE;
-  constructor(public payload: ShoppingItem) {}
+  constructor(public payload: Error) {}
 }
 export class DeleteItemAction implements Action {
   readonly type = ShoppingActionTypes.DELETE_ITEM;
   constructor(public payload: string) {}
 }
-export class DeleteItemActionSuccess implements Action {
+export class DeleteItemSuccessAction implements Action {
   readonly type = ShoppingActionTypes.DELETE_ITEM_SUCCESS;
   constructor(public payload: string) {}
 }
-export class DeleteItemActionFailure implements Action {
+export class DeleteItemFailureAction implements Action {
   readonly type = ShoppingActionTypes.DELETE_ITEM_FAILURE;
-  constructor(public payload: string) {}
+  constructor(public payload: Error) {}
 }
-export type ShoppingAction = AddItemAction | DeleteItemAction | AddItemActionSucess | AddItemActionFailure | DeleteItemActionSuccess | DeleteItemActionFailure | LoadShoppingAction | LoadShoppingActionSucess | LoadShoppingActionFailure;
+export type ShoppingAction = AddItemAction | DeleteItemAction | AddItemSucessAction |
+ AddItemFailureAction | DeleteItemSuccessAction | DeleteItemFailureAction |
+  LoadShoppingAction | LoadShoppingSucessAction | LoadShoppingFailureAction;
 
