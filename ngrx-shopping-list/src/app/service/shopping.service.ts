@@ -10,7 +10,7 @@ export class ShoppingService {
   constructor(private http: HttpClient) {}
 
   getShoppingItems() {
-     return this.http.get(this.SHOPPING_URL).pipe(delay(500));
+     return this.http.get<ShoppingItem[]>(this.SHOPPING_URL).pipe(delay(500));
   }
   addShoppingItems(shoppingItem: ShoppingItem) {
     return this.http.post(this.SHOPPING_URL, shoppingItem).pipe(delay(500));
