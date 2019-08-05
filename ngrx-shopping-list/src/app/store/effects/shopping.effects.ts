@@ -5,7 +5,8 @@ import { LoadShoppingAction, ShoppingActionTypes, LoadShoppingFailureAction,
     LoadShoppingSucessAction, AddItemSucessAction, AddItemFailureAction, 
     AddItemAction, DeleteItemAction, DeleteItemSuccessAction, DeleteItemFailureAction } from '../actions/shopping.action';
 import { mergeMap, map, catchError } from 'rxjs/operators';
-import { error } from 'util';
+import { of } from 'rxjs';
+
 
 @Injectable()
 export class ShoppingEffects {
