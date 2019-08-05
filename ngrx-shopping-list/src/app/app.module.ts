@@ -6,6 +6,8 @@ import {ShoppingReducer} from './store/reducer/shopping.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { FormsModule} from '@angular/forms';
 import {  HttpClientModule } from '@angular/common/http';
+import { EffectsModule } from '@ngrx/effects';
+import { ShoppingEffects } from './store/effects/shopping.effects';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import {  HttpClientModule } from '@angular/common/http';
       maxAge: 25
     }),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    EffectsModule.forRoot([ShoppingEffects])
 
   ],
   providers: [],
