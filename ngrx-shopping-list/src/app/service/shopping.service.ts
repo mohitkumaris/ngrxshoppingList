@@ -13,7 +13,7 @@ export class ShoppingService {
      return this.http.get(this.SHOPPING_URL).pipe(delay(500));
   }
   addShoppingItems(shoppingItem: ShoppingItem) {
-    return this.http.post(this.SHOPPING_URL,shoppingItem).pipe(delay(500));
+    return this.http.post(this.SHOPPING_URL, shoppingItem).pipe(delay(500));
   }
   deleteShoppingItems(id: string) {
     return this.http.delete(`${this.SHOPPING_URL}/${id}`).pipe(delay(500));
