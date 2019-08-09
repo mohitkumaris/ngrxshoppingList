@@ -1,7 +1,8 @@
 import {ShoppingItem} from './shopping-list.model';
+import { ShoppingState } from '../reducer/shopping.reducer';
 
 export interface AppState {
-  readonly shopping: Array<ShoppingItem>;
+  readonly shopping: ShoppingState;
 }
 /*
 This will allow us to type the structure of our Store and

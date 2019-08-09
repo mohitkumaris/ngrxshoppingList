@@ -3,7 +3,7 @@ import { AppState } from './store/model/app-state.model';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { ShoppingItem } from './store/model/shopping-list.model';
-import { AddItemAction, DeleteItemAction } from './store/actions/shopping.action';
+import { AddItemAction, DeleteItemAction, LoadShoppingAction } from './store/actions/shopping.action';
 import { v4 as uuid } from 'uuid';
 
 @Component({
@@ -14,10 +14,14 @@ import { v4 as uuid } from 'uuid';
 
 export class AppComponent implements OnInit {
   shoppingItems$: Observable<Array<ShoppingItem>>;
+  loading$: Observable<boolean>;
+  error$: Observable<Error>;
+
   newShoppingItem: ShoppingItem = { id: '', name: '' };
   constructor(private store: Store<AppState>) {}
   ngOnInit(): void {
-   this.shoppingItems$ = this.store.select(store => store.shopping);
+   this.shoppingItems$ = this.store.select(store => store.shopping.list);
+   this.store.dispatch(new LoadShoppingAction());
    }
   addItem() {
     this.newShoppingItem.id = uuid();

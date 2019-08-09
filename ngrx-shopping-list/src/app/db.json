@@ -1,8 +1,48 @@
 {
-  "shopping":[
+  "shopping": [
     {
       "id": "123",
       "name": "coke"
+    },
+    {
+      "id": "e0feda28-c020-4b51-91df-e9cdda901253",
+      "name": "fanta"
+    },
+    {
+      "id": "c817ecd8-14b2-44f7-9638-c13289c3c9c3",
+      "name": "fanta"
+    },
+    {
+      "id": "3c367841-68c0-4dfc-83da-4f50bdbb5868",
+      "name": ""
+    },
+    {
+      "id": "3e1bff59-a022-414e-8f01-2c00f6e12821",
+      "name": ""
+    },
+    {
+      "id": "6bf7e7a3-6e8e-4d02-aab7-2748474f8767",
+      "name": "sprite"
+    },
+    {
+      "id": "f3063e63-7994-466b-b0ca-35222d710ede",
+      "name": "sprite AGAIN"
+    },
+    {
+      "id": "d505f2a3-4bf2-4252-b323-f86f5fb6ac48",
+      "name": "NEW ITEM"
+    },
+    {
+      "id": "b8eef47f-1236-4fc2-93f3-7f268fc9c47f",
+      "name": "NEW"
+    },
+    {
+      "id": "f871c733-7344-487d-9c22-5e33b6e2d375",
+      "name": "NEW AGAIN"
+    },
+    {
+      "id": "c91847d0-ad0a-480c-934c-53986c6b820b",
+      "name": ""
     }
   ]
 }
