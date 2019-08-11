@@ -1,5 +1,6 @@
 import {ShoppingItem} from '../model/shopping-list.model';
 import {ShoppingAction, ShoppingActionTypes} from '../actions/shopping.action';
+import { State } from '@ngrx/store';
 
 export interface ShoppingState {
   list: Array<ShoppingItem>;
@@ -38,7 +39,7 @@ export function ShoppingReducer(state: ShoppingState = intialState, action: Shop
         loading: true
       };
     case ShoppingActionTypes.ADD_ITEM_SUCCESS:
-      return  {...state, list: action.payload, loading: false};
+      return  {...state, list: [...state.list, action.payload] , loading: false};
     // tslint:disable-next-line: no-switch-case-fall-through
     case ShoppingActionTypes.ADD_ITEM_FAILURE:
       return {
@@ -65,3 +66,9 @@ export function ShoppingReducer(state: ShoppingState = intialState, action: Shop
 
   }
 }
+/*
+Selectors
+*/
+export const getShoppingLoading = (state: ShoppingState) => state.loading;
+export const getShoppingError = (state: ShoppingState) => state.error;
+export const getShppingList = (state: ShoppingState) => state.list;

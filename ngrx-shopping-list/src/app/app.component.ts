@@ -21,6 +21,9 @@ export class AppComponent implements OnInit {
   constructor(private store: Store<AppState>) {}
   ngOnInit(): void {
    this.shoppingItems$ = this.store.select(store => store.shopping.list);
+   // Selector composes different level of state to give us new state.
+   this.loading$ = this.store.select(store => store.shopping.loading);
+   this.error$ = this.store.select(store => store.shopping.error);
    this.store.dispatch(new LoadShoppingAction());
    }
   addItem() {

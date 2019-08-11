@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Actions, ofType, Effect } from '@ngrx/effects';
 import { ShoppingService } from 'src/app/service/shopping.service';
-import { LoadShoppingAction, ShoppingActionTypes, LoadShoppingFailureAction, 
-    LoadShoppingSucessAction, AddItemSucessAction, AddItemFailureAction, 
+import { LoadShoppingAction, ShoppingActionTypes, LoadShoppingFailureAction,
+    LoadShoppingSucessAction, AddItemSucessAction, AddItemFailureAction,
     AddItemAction, DeleteItemAction, DeleteItemSuccessAction, DeleteItemFailureAction } from '../actions/shopping.action';
 import { mergeMap, map, catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
@@ -26,12 +26,12 @@ export class ShoppingEffects {
     .pipe(
         ofType<AddItemAction>(ShoppingActionTypes.ADD_ITEM),
         mergeMap(
-           (data) => this.shoppingService.addShoppingItems(data.payload)
+           (data => this.shoppingService.addShoppingItems(data.payload)
            .pipe(
                map( () => new AddItemSucessAction(data.payload)),
                catchError(error => of(new AddItemFailureAction(error)))
            )
-        ));
+        )));
 
         @Effect() deleteShopping$ = this.actions$
         .pipe(
