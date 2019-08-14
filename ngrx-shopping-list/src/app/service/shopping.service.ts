@@ -18,4 +18,7 @@ export class ShoppingService {
   deleteShoppingItems(id: string) {
     return this.http.delete(`${this.SHOPPING_URL}/${id}`).pipe(delay(500));
   }
+  updateShoppingItems(shoppingItem: ShoppingItem) {
+    return this.http.put(`${this.SHOPPING_URL}/${shoppingItem.id}`, shoppingItem).pipe(delay(500));
+  }
 }

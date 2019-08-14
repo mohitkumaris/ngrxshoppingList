@@ -60,6 +60,19 @@ export function ShoppingReducer(state: ShoppingState = intialState, action: Shop
         error: action.payload,
         loading: false
       };
+      case ShoppingActionTypes.UPDATE_ITEM:
+        return {
+          ...state,
+          loading: true
+        };
+      case ShoppingActionTypes.UPDATE_ITEM_SUCCESS:
+        return {...state, list: [...state.list, action.payload], loading: false };
+      case ShoppingActionTypes.UPDATE_ITEM_FAILURE:
+        return {
+          ...state,
+          error: action.payload,
+          loading: false
+        };
 
     default:
       return state;

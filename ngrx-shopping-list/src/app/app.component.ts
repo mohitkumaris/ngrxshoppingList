@@ -3,7 +3,7 @@ import { AppState } from './store/model/app-state.model';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { ShoppingItem } from './store/model/shopping-list.model';
-import { AddItemAction, DeleteItemAction, LoadShoppingAction } from './store/actions/shopping.action';
+import { AddItemAction, DeleteItemAction, LoadShoppingAction, UpdateItemAction } from './store/actions/shopping.action';
 import { v4 as uuid } from 'uuid';
 
 @Component({
@@ -40,6 +40,10 @@ export class AppComponent implements OnInit {
     this.editId = id;
   }
   cancelItem(id: string) {
+    this.editId = ' ';
+  }
+  updateItem(data: ShoppingItem) {
+    this.store.dispatch(new UpdateItemAction(data));
     this.editId = ' ';
   }
 }

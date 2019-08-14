@@ -12,8 +12,8 @@
         <tr *ngFor="let shopping of shoppingItems$ | async" >
           <td>
 
-            <span *ngIf="shopping.id != editId">{{shopping.name}}</span>
-            <input type="text" value="{{shopping.name}}" *ngIf="shopping.id == editId"/>
+            <span *ngIf="shopping.id != editId" >{{shopping.name}}</span>
+            <input type="text"  [(ngModel)]="shopping.name" *ngIf="shopping.id == editId"/>
 
           </td>
           <td>
@@ -24,7 +24,7 @@
                 <button (click)="editItem(shopping.id)" *ngIf="shopping.id != editId">Edit</button>
 
             <div *ngIf="shopping.id == editId">
-            <button (click)="updateItem(shopping.id)" >Update</button>
+            <button (click)="updateItem(shopping)" >Update</button>
             <button (click)="cancelItem(shopping.id)" >Cancel</button>
           </div>
           </td>

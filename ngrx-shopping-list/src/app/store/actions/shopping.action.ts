@@ -40,15 +40,15 @@ export class AddItemFailureAction implements Action {
   constructor(public payload: Error) {}
 }
 export class UpdateItemAction implements Action {
-  readonly type = ShoppingActionTypes.ADD_ITEM;
+  readonly type = ShoppingActionTypes.UPDATE_ITEM;
   constructor(public payload: ShoppingItem) {}
 }
 export class UpdateItemSucessAction implements Action {
-  readonly type = ShoppingActionTypes.ADD_ITEM_SUCCESS;
+  readonly type = ShoppingActionTypes.UPDATE_ITEM_SUCCESS;
   constructor(public payload: ShoppingItem) {}
 }
 export class UpdateItemFailureAction implements Action {
-  readonly type = ShoppingActionTypes.ADD_ITEM_FAILURE;
+  readonly type = ShoppingActionTypes.UPDATE_ITEM_FAILURE;
   constructor(public payload: Error) {}
 }
 export class DeleteItemAction implements Action {
@@ -65,5 +65,6 @@ export class DeleteItemFailureAction implements Action {
 }
 export type ShoppingAction = AddItemAction | DeleteItemAction | AddItemSucessAction |
  AddItemFailureAction | DeleteItemSuccessAction | DeleteItemFailureAction |
-  LoadShoppingAction | LoadShoppingSucessAction | LoadShoppingFailureAction;
+  LoadShoppingAction | LoadShoppingSucessAction | LoadShoppingFailureAction | UpdateItemAction
+  | UpdateItemSucessAction | UpdateItemFailureAction;
 
