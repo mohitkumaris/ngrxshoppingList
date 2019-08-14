@@ -3,14 +3,26 @@
   <div id="shopping-list">
     <div id="list">
       <h2>Shopping List</h2>
+      <table id="shoppingList">
+          <tr>
+              <th>Name</th>
+              <th>Delete</th>
+              <th>Update</th>
+            </tr>
+        <tr *ngFor="let shopping of shoppingItems$ | async" >
+          <td>
+            {{ shopping.name }}
+          </td>
+          <td>
+            <button (click)="deleteItem(shopping.id)">Delete</button>
+          </td>
+          <td>
+            <button >Update</button>
+          </td>
+        </tr>
 
-      <ul>
-        <li *ngFor="let shopping of shoppingItems$ | async" (click)="deleteItem(shopping.id)">
-          {{ shopping.name }}
-        </li>
-      </ul>
-    </div>
-    <form (ngSubmit)="addItem()">
+      </table>
+      <form (ngSubmit)="addItem()">
       <input type="text" [(ngModel)]="newShoppingItem.name" placeholder="Item" name="itemName"/>
       <button type="submit" >+</button>
     </form>
