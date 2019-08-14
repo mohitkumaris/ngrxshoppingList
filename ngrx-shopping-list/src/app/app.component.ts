@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   shoppingItems$: Observable<Array<ShoppingItem>>;
   loading$: Observable<boolean>;
   error$: Observable<Error>;
-
+  editId: string;
   newShoppingItem: ShoppingItem = { id: '', name: '' };
   constructor(private store: Store<AppState>) {}
   ngOnInit(): void {
@@ -35,5 +35,11 @@ export class AppComponent implements OnInit {
   }
   deleteItem(id: string) {
    this.store.dispatch(new DeleteItemAction(id));
+  }
+  editItem(id: string) {
+    this.editId = id;
+  }
+  cancelItem(id: string) {
+    this.editId = ' ';
   }
 }

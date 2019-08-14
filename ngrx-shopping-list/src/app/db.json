@@ -1,48 +1,32 @@
 {
   "shopping": [
     {
-      "id": "123",
-      "name": "coke"
-    },
-    {
-      "id": "e0feda28-c020-4b51-91df-e9cdda901253",
-      "name": "fanta"
-    },
-    {
-      "id": "c817ecd8-14b2-44f7-9638-c13289c3c9c3",
-      "name": "fanta"
-    },
-    {
-      "id": "3c367841-68c0-4dfc-83da-4f50bdbb5868",
-      "name": ""
-    },
-    {
-      "id": "3e1bff59-a022-414e-8f01-2c00f6e12821",
-      "name": ""
-    },
-    {
       "id": "6bf7e7a3-6e8e-4d02-aab7-2748474f8767",
       "name": "sprite"
     },
     {
-      "id": "f3063e63-7994-466b-b0ca-35222d710ede",
-      "name": "sprite AGAIN"
+      "id": "b003ae3a-433e-46f6-8602-79a38d7c14b1",
+      "name": "coke"
     },
     {
-      "id": "d505f2a3-4bf2-4252-b323-f86f5fb6ac48",
-      "name": "NEW ITEM"
+      "id": "faa3236f-e279-4e6c-aac3-5547a69fc7fe",
+      "name": "pepsi"
     },
     {
-      "id": "b8eef47f-1236-4fc2-93f3-7f268fc9c47f",
-      "name": "NEW"
+      "id": "5ad7eaef-ea39-4cd4-8270-d015a36a62f2",
+      "name": "thumbs"
     },
     {
-      "id": "f871c733-7344-487d-9c22-5e33b6e2d375",
-      "name": "NEW AGAIN"
+      "id": "fe5550fe-6513-4c0e-ba07-d182c4a165c1",
+      "name": "pepsi"
     },
     {
-      "id": "c91847d0-ad0a-480c-934c-53986c6b820b",
-      "name": ""
+      "id": "dc96ed00-6d3a-4afd-9927-af2c1d246028",
+      "name": "coke"
+    },
+    {
+      "id": "ea6e14fd-cf5d-44a6-9a80-93cf29c3e231",
+      "name": "tubourg"
     }
   ]
 }
